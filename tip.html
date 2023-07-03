@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <section>
+            <div class="wrapper">
+                <label for="bill" class="lbl">Bill</label>
+                <div class="input-box">
+                    <span>$</span>
+                    <input type="number" value="0.00" oninput="final_check()" id="bill_initial_amount" class="val">
+                </div>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Tip</span>
+                <span id="tip" class="val">$0</span>
+            </div>
+            <hr>
+            <div class="wrapper">
+                <span class="lbl">Total Amount</span>
+                <span id="final_amount" class="val">$0</span>
+            </div>
+        </section>
+        <section>
+            <div class="wrapper">
+                <label for="tip" class="lbl">Tip %</label>
+                <span id="range_input" class="val">0</span>
+            </div>
+            <input oninput="final_check()" type="range" min="1" max="80" id="tip_percentage" value="15">
+            <div class="wrapper">
+                <label for="no-of-people" class="lbl">No. Of People</label>
+                <span id="people_input" class="val">0</span>
+            </div>
+            <input oninput="final_check()" type="range" min="1" max="10" id="total_people" value="1">
+        </section>
+        <section>
+            <div class="wrapper">
+                <span class="lbl">Tip Per Person</span>
+                <span id="tip_per_person" class="val">$0</span>
+            </div>
+            <div class="wrapper">
+                <span class="lbl">Total Per Person</span>
+                <span id="total_per_person" class="val">$0</span>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
