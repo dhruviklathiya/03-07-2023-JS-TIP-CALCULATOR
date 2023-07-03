@@ -1,3 +1,7 @@
+:root{
+    --primary-color: #654104;
+    --secondary-color: #3a36bd;
+}
 *{
     padding: 0;
     margin: 0;
@@ -6,16 +10,14 @@
     letter-spacing: 0.4px;
 }
 body{
-    background-color: #f3f3f3;
     height: 100%;
-    font-family: cursive;
     background: linear-gradient(
         135deg,
-        #6f6df4,
-        #4c4af4
-    ) fixed;
-    background-size: 100% 50%;
-    background-repeat: no-repeat;
+        var(--primary-color),
+        var(--secondary-color)
+        ) fixed;
+        background-size: 100% 50%;
+        background-repeat: no-repeat;
 }
 .container{
     background-color: #ffffff;
@@ -46,7 +48,7 @@ body{
 }
 .input-box{
     background-color: #cdccfd;
-    color: #6f6df4;
+    color: var(--primary-color);
     padding: 5px;
 }
 #bill_initial_amount{
@@ -55,7 +57,7 @@ body{
     outline: none;
     width: 100px;
     text-align: right;
-    color: #6f6df4;
+    color: var(--primary-color);
 }
 hr{
     border: none;
@@ -81,5 +83,5 @@ section:last-child{
 }
 section:last-child .val,
 section:last-child .lbl{
-    color: #4c4af4;
+    color: var(--secondary-color);
 }
